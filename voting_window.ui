@@ -1,226 +1,311 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>voting_window</class>
+ <widget class="QMainWindow" name="voting_window">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>500</height>
+    <width>479</width>
+    <height>577</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="voting_label">
+   <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>25</y>
-      <width>220</width>
-      <height>25</height>
+      <x>0</x>
+      <y>0</y>
+      <width>450</width>
+      <height>500</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
-    <property name="text">
-     <string>Python Presidential Elections</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
+    <widget class="QWidget" name="home_page">
+     <widget class="QPushButton" name="results_button">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>350</y>
+        <width>80</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <italic>false</italic>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="text">
+       <string>View Results</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="candidate4_checkBox">
+      <property name="geometry">
+       <rect>
+        <x>125</x>
+        <y>200</y>
+        <width>150</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CheckBox</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">candidate_group</string>
+      </attribute>
+     </widget>
+     <widget class="QCheckBox" name="candidate3_checkBox">
+      <property name="geometry">
+       <rect>
+        <x>125</x>
+        <y>175</y>
+        <width>150</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CheckBox</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">candidate_group</string>
+      </attribute>
+     </widget>
+     <widget class="QLineEdit" name="id_input">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>60</y>
+        <width>125</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="id_label">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>60</y>
+        <width>75</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Voter ID:</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="candidate1_checkBox">
+      <property name="geometry">
+       <rect>
+        <x>125</x>
+        <y>125</y>
+        <width>150</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CheckBox</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">candidate_group</string>
+      </attribute>
+     </widget>
+     <widget class="QLabel" name="error_label">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>400</y>
+        <width>300</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="candidate2_checkBox">
+      <property name="geometry">
+       <rect>
+        <x>125</x>
+        <y>150</y>
+        <width>150</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CheckBox</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">candidate_group</string>
+      </attribute>
+     </widget>
+     <widget class="QCheckBox" name="candidate5_checkBox">
+      <property name="geometry">
+       <rect>
+        <x>125</x>
+        <y>225</y>
+        <width>150</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CheckBox</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">candidate_group</string>
+      </attribute>
+     </widget>
+     <widget class="QPushButton" name="submit_button">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>350</y>
+        <width>80</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Cast Vote</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="voting_label">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>20</y>
+        <width>250</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Python Presidential Elections</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="results_page">
+     <widget class="QPushButton" name="back_button">
+      <property name="geometry">
+       <rect>
+        <x>175</x>
+        <y>400</y>
+        <width>80</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="results_label">
+      <property name="geometry">
+       <rect>
+        <x>125</x>
+        <y>25</y>
+        <width>200</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Python Election Results</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="election_results_label">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>100</y>
+        <width>301</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>No data.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
    </widget>
-   <widget class="QLabel" name="error_label">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>400</y>
-      <width>200</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="candidate1_checkBox">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>115</y>
-      <width>150</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CheckBox</string>
-    </property>
-    <attribute name="buttonGroup">
-     <string notr="true">candidate_group</string>
-    </attribute>
-   </widget>
-   <widget class="QCheckBox" name="candidate2_checkBox">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>165</y>
-      <width>150</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CheckBox</string>
-    </property>
-    <attribute name="buttonGroup">
-     <string notr="true">candidate_group</string>
-    </attribute>
-   </widget>
-   <widget class="QCheckBox" name="candidate3_checkBox">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>215</y>
-      <width>150</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CheckBox</string>
-    </property>
-    <attribute name="buttonGroup">
-     <string notr="true">candidate_group</string>
-    </attribute>
-   </widget>
-   <widget class="QCheckBox" name="candidate4_checkBox">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>265</y>
-      <width>150</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CheckBox</string>
-    </property>
-    <attribute name="buttonGroup">
-     <string notr="true">candidate_group</string>
-    </attribute>
-   </widget>
-   <widget class="QCheckBox" name="candidate5_checkBox">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>315</y>
-      <width>150</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CheckBox</string>
-    </property>
-    <attribute name="buttonGroup">
-     <string notr="true">candidate_group</string>
-    </attribute>
-   </widget>
-   <widget class="QLineEdit" name="id_input">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>65</y>
-      <width>125</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="id_label">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>70</y>
-      <width>50</width>
-      <height>10</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Voter ID:</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="submit_button">
-    <property name="geometry">
-     <rect>
-      <x>105</x>
-      <y>365</y>
-      <width>75</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Cast Vote</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="results_button">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>365</y>
-      <width>75</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>View Results</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>400</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuVoting_Window">
-    <property name="title">
-     <string>Voting Window</string>
-    </property>
-   </widget>
-   <addaction name="menuVoting_Window"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
